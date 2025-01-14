@@ -1,0 +1,36 @@
+/**
+ * For screens whose width is less than or equal to `$width`
+ *
+ * @param {number} $width - Maximum screen width in pixels
+ * @param {string} $units - Units
+ */
+@mixin max-width($width, $units: 'px') {
+  @media only screen and (max-width: #{$width + $units}) {
+    @content;
+  }
+}
+/**
+ * For screens whose width is greater than or equal to `$width`
+ *
+ * @param {number} $width - Minimum screen width in pixels
+ * @param {string} $units - Units
+ */
+@mixin min-width($width, $units: 'px') {
+  @media only screen and (min-width: #{$width + $units}) {
+    @content;
+  }
+}
+/**
+ * For screens with a width of `$max-width` to `$min-width`
+ *
+ * @param {number} $max-width - Maximum screen width in pixels
+ * @param {number} $min-width - Minimum screen width in pixels
+ * @param {string} $units - Units
+ */
+@mixin mm-width($max-width, $min-width, $units: 'px') {
+  $max: max($max-width, $min-width);
+  $min: min($max-width, $min-width);
+  @media only screen and (max-width: #{$max + $units}) and (min-width: #{$min + $units}) {
+    @content;
+  }
+}

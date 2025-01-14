@@ -1,0 +1,168 @@
+.services-wrapper {
+  h2 {
+    margin-bottom: 32px;
+
+    @include min-width($bp-tablet) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.services {
+  display: grid;
+  gap: 40px 8px;
+
+  @include min-width($bp-desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service {
+  &__header {
+    border-radius: 12px 12px 0 0;
+    padding: 12px 12px 12px 44px;
+    position: relative;
+    font-family: $title-font;
+    font-size: 22px;
+    line-height: 24px;
+
+    &::before {
+      width: 32px;
+      height: 53px;
+      background-color: $primary-500;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: '';
+      transform: skewY(-26deg);
+      transform-origin: 0 100%;
+    }
+
+    &.--yellow {
+      background-color: $color-card-yellow;
+    }
+
+    &.--blue {
+      background-color: $color-card-blue;
+    }
+
+    &.--orange {
+      background-color: $color-card-orange;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: $white;
+    border-radius: 0 0 12px 12px;
+    padding: 16px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__features {
+    display: grid;
+    column-gap: 40px;
+    row-gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+  }
+
+  &__feature-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 2px;
+  }
+
+  &__feature-icon {
+    color: $primary-400;
+    width: 22px;
+    height: 22px;
+  }
+
+  &__feature-price {
+    font-family: $title-font;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  @include min-width($bp-tablet) {
+    &__header {
+      font-size: 28px;
+      line-height: 32px;
+      padding: 14px 14px 14px 56px;
+
+      &::before {
+        width: 40px;
+        height: 64px;
+      }
+    }
+
+    &__content {
+      gap: 32px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &__features {
+      row-gap: 24px;
+    }
+
+    &__feature-title {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__feature-price {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__actions {
+      flex-direction: row;
+    }
+
+    &__button {
+      width: fit-content;
+    }
+  }
+
+  @include min-width($bp-desktop) {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    &__content {
+      flex-basis: 100%;
+    }
+
+    &__actions {
+      margin-top: auto;
+    }
+  }
+}

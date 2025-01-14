@@ -1,0 +1,52 @@
+/**
+ * Common styles
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $color-text;
+  background-color: $color-page-fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+  display: block;
+  padding: 16px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  @include min-width($bp-tablet) {
+    padding: 24px;
+  }
+}
+
+.section {
+  padding: 24px 0;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  @include min-width($bp-tablet) {
+    padding: 40px 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  @include min-width($bp-tablet) {
+    padding: 0 40px;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}

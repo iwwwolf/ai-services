@@ -1,0 +1,190 @@
+{% from "components/button.njk" import button %}
+
+<section class="section services-wrapper">
+  <h2>Наши сервисы</h2>
+
+  <div class="services">
+    <div class="service">
+      <div class="service__header --yellow">
+        AI-Operator
+      </div>
+
+      <div class="service__content">
+        <div class="service__text">
+          Автоматическая обработка обращений клиентов в службу поддержки
+        </div>
+
+        <ul class="service__features">
+          <li class="service__feature">
+            <div class="service__feature-title">
+              <svg class="icon service__feature-icon">
+                <use xlink:href="sprite.svg#plug"></use>
+              </svg>
+
+              Интеграция
+            </div>
+
+            <div class="service__feature-price">
+              от 500 000 ₽
+            </div>
+          </li>
+
+          <li class="service__feature">
+            <div class="service__feature-title">
+              <svg class="icon service__feature-icon">
+                <use xlink:href="sprite.svg#headphones"></use>
+              </svg>
+
+              Поддержка
+            </div>
+
+            <div class="service__feature-price">
+              от 150 000 ₽
+            </div>
+          </li>
+
+          <li class="service__feature">
+            <div class="service__feature-title">
+              <svg class="icon service__feature-icon">
+                <use xlink:href="sprite.svg#check-square"></use>
+              </svg>
+
+              Обработка обращения
+            </div>
+
+            <div class="service__feature-price">
+              15 ₽ с НДС
+            </div>
+          </li>
+        </ul>
+
+        <div class="service__actions">
+          {{ button("Презентация", "translucent-light", "small", "service__button") }}
+          {{ button("Смотреть Видео", "translucent-light", "small", "service__button") }}
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="service__header --blue">
+        AI-Manager
+      </div>
+
+      <div class="service__content">
+        <div class="service__text">
+          Организация взаимодействия сотрудников в корпоративных мессенджерах
+        </div>
+
+        <ul class="service__features">
+          <li class="service__feature">
+            <div class="service__feature-title">
+              <svg class="icon service__feature-icon">
+                <use xlink:href="sprite.svg#plug"></use>
+              </svg>
+
+              Интеграция
+            </div>
+
+            <div class="service__feature-price">
+              от 500 000 ₽
+            </div>
+          </li>
+
+          <li class="service__feature">
+            <div class="service__feature-title">
+              <svg class="icon service__feature-icon">
+                <use xlink:href="sprite.svg#headphones"></use>
+              </svg>
+
+              Поддержка
+            </div>
+
+            <div class="service__feature-price">
+              от 150 000 ₽
+            </div>
+          </li>
+
+          <li class="service__feature">
+            <div class="service__feature-title">
+              <svg class="icon service__feature-icon">
+                <use xlink:href="sprite.svg#check-square"></use>
+              </svg>
+
+              Обработка лида
+            </div>
+
+            <div class="service__feature-price">
+              50 ₽ с НДС
+            </div>
+          </li>
+        </ul>
+
+        <div class="service__actions">
+          {{ button("Презентация", "translucent-light", "small", "service__button") }}
+          {{ button("Смотреть Видео", "translucent-light", "small", "service__button") }}
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="service__header --orange">
+        AI-Sales
+      </div>
+
+      <div class="service__content">
+        <div class="service__text">
+          Анализ звонков менеджеров по продажам и оптимизации скриптов
+        </div>
+
+        <ul class="service__features">
+          <li class="service__feature">
+            <div class="service__feature-title">
+              <svg class="icon service__feature-icon">
+                <use xlink:href="sprite.svg#headphones"></use>
+              </svg>
+
+              Поддержка
+            </div>
+
+            <div class="service__feature-price">
+              от 40 000 ₽
+            </div>
+          </li>
+
+          <li class="service__feature">
+            <div class="service__feature-title">
+              <svg class="icon service__feature-icon">
+                <use xlink:href="sprite.svg#list"></use>
+              </svg>
+
+              Подготовка текста
+            </div>
+
+            <div class="service__feature-price">
+              25 ₽ с НДС
+            </div>
+          </li>
+
+          <li class="service__feature">
+            <div class="service__feature-title">
+              <svg class="icon service__feature-icon">
+                <use xlink:href="sprite.svg#image"></use>
+              </svg>
+
+              Подготовка изображения
+            </div>
+
+            <div class="service__feature-price">
+              120 ₽ с НДС
+            </div>
+          </li>
+        </ul>
+
+        <div class="service__actions">
+          {{ button("Презентация", "translucent-light", "small", "service__button") }}
+          {{ button("Смотреть Видео", "translucent-light", "small", "service__button") }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

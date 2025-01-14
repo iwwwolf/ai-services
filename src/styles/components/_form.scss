@@ -1,0 +1,20 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__item {
+    text-align: center;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  @include min-width($bp-tablet) {
+    &__button {
+      width: fit-content;
+    }
+  }
+}
+

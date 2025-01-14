@@ -1,0 +1,10 @@
+{% macro button(text, color='primary', size='large', className='') %}
+  <button class="
+    button 
+    --{{ color }} 
+    --{{ size }} 
+    {{ className }}
+  ">
+    {{ text }}
+  </button>
+{% endmacro %}

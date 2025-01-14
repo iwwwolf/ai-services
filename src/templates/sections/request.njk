@@ -1,0 +1,51 @@
+{% from "components/button.njk" import button %}
+{% from "components/text-field.njk" import textField %}
+
+<section class="section">
+  <div 
+    class="request" 
+    id="request"
+  >
+    <div class="request__content">
+      <div class="request__text-wrapper">
+        <h3>
+          Начните технологическую революцию в&nbsp;вашей компании прямо сейчас!
+        </h3>
+
+        <div class="request__text">
+          <p>
+            «Мы наблюдаем беспрецедентный спрос на ChatGPT в&nbsp;организациях. С&nbsp;момента запуска ChatGPT девять месяцев назад, мы видели, как его внедрили более 80% компаний из списка Fortune 500», — утверждают в OpenAI
+          </p>
+        </div>
+      </div>
+
+      <form class="form">
+        <div class="form__item">
+          {{ textField("phone", "tel", "+7 (___) ___-__-__") }}
+        </div>
+
+        <div class="form__item">
+          {{ textField("company", "text", "Наименование компании") }}
+        </div>
+
+        <div class="form__item">
+          {{ textField("position", "text", "Должность") }}
+        </div>
+
+        <div class="form__item">
+          {{ textField("name", "text", "ФИО") }}
+        </div>
+
+        <div class="form__actions">
+          {{ button("Отправить", "primary", "large", "form__button") }}
+        </div>
+      </form>
+    </div>
+
+    <img 
+      src="images/intro-bg.jpg" 
+      class="request__image" 
+      alt="Background"
+    />
+  </div> 
+</section> 

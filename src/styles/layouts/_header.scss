@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  &__actions {
+    display: none;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 162px;
+    height: 20px;
+  }
+
+  @include min-width($bp-tablet) {
+    &__actions {
+      display: flex;
+    }
+
+    &__burger {
+      display: none;
+    }
+
+    .logo {
+      width: 258px;
+      height: 32px;
+    }
+  }
+}

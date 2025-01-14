@@ -1,0 +1,99 @@
+.intro {
+  max-width: 1360px;
+  margin: 0 auto;
+  background-color: $primary-500;
+  color: $white;
+  padding: 24px 12px 88px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  &__title-small {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: none;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 24px;
+    max-width: 480px;
+    text-wrap: balance;
+  }
+
+  &__button {
+    width: 100%;
+
+    @include min-width(420) {
+      width: fit-content;
+    }
+  }
+
+  &__image {
+    max-width: none;
+    width: 115%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(40px, 40%);
+    pointer-events: none;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  @include min-width($bp-tablet) {
+    padding: 40px 40px 188px;
+    margin-bottom: 24px;
+    
+    &__header {
+      margin-bottom: 64px;
+    }
+    
+    &__title {
+      max-width: 640px;
+      text-align: right;
+      margin-bottom: 64px;
+    }
+    
+    &__title-small {
+      display: flex;
+      flex-direction: column;
+      margin-top: -26px;
+      text-align: left;
+      font-size: 28px;
+      line-height: 32px;
+    }
+    
+    &__text {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  @include min-width($bp-desktop) {
+    margin-bottom: 40px;
+
+    &__title {
+      max-width: 852px;
+    }
+  }
+}

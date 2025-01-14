@@ -1,0 +1,20 @@
+{% from "components/button.njk" import button %}
+
+{% macro header(className='') %}
+<header class="header {{ className }}">
+  <svg class="logo">
+    <use xlink:href="sprite.svg#logo"></use>
+  </svg>
+
+  <div class="header__actions">
+    {{ button("Регистрация", "translucent", "small", "header__button") }}
+    {{ button("Войти", "translucent", "small", "header__button") }}
+  </div>
+
+  <button class="header__burger">
+    <svg class="icon">
+      <use xlink:href="sprite.svg#burger"></use>
+    </svg>
+  </button>
+</header>
+{% endmacro %}

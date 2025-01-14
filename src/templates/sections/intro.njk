@@ -1,0 +1,31 @@
+{% from "components/button.njk" import button %}
+{% from "components/header.njk" import header %}
+
+<div class="intro">
+  <div class="container">
+    <div class="intro__content">
+      {{ header("intro__header") }}
+      
+      <h1 class="intro__title">
+        Искусственный Интеллект
+
+        <span class="intro__title-small">
+          <span>для</span>
+          <span>бизнеса</span>
+        </span>
+      </h1>
+
+      <div class="intro__text">
+        Разработка, внедрение и сопровождение решений на базе Искусcтвенного интеллекта для вашего бизнеса.
+      </div>
+
+      {{ button("Получить предложение", "primary", "large", "intro__button") }}
+    </div>
+  </div>
+
+  <img 
+    src="images/intro-bg.jpg" 
+    class="intro__image" 
+    alt="Intro"
+  />
+</div>

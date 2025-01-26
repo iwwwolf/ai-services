@@ -1,0 +1,12 @@
+.mobile-navigation {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  max-width: 460px;
+  padding: 16px;
+  margin: auto auto 0;
+
+  .button {
+    width: 100%;
+  }
+}

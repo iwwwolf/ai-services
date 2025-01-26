@@ -1,0 +1,29 @@
+{% from "components/button.njk" import button %}
+{% from "components/text-field.njk" import textField %}
+
+<div 
+  id="request-sent-popup" 
+  class="popup"
+>
+  <div class="popup__backdrop"></div>
+  {# Request sent #}
+  <div class="popup__window --text-center">
+    <div class="popup__close">
+      <svg class="icon">
+        <use xlink:href="sprite.svg#close"></use>
+      </svg>
+    </div>
+
+    <svg class="icon request-popup-icon">
+      <use xlink:href="sprite.svg#confirmed"></use>
+    </svg>
+
+    <div class="popup__title">
+      Заявка отправлена
+    </div>
+
+    <div class="popup__actions --center">
+      {{ button("Закрыть", "primary", "large", "") }}
+    </div>
+  </div>
+</div>

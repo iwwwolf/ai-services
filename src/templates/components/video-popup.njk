@@ -1,0 +1,29 @@
+{% from "components/button.njk" import button %}
+{% from "components/text-field.njk" import textField %}
+
+<div 
+  id="video-popup"
+  class="popup"
+>
+  <div class="popup__backdrop"></div>
+  {# Video #}
+  <div class="popup__window --transparent">
+    <div class="popup__close">
+      <svg class="icon">
+        <use xlink:href="sprite.svg#close"></use>
+      </svg>
+    </div>
+
+    <div class="video-wrapper">
+      <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/NpEaa2P7qZI?si=nW6ZPz-QmfZubX-a" 
+      title="YouTube video player" 
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

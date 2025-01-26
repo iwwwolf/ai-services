@@ -1,0 +1,33 @@
+{% from "components/button.njk" import button %}
+{% from "components/text-field.njk" import textField %}
+
+<div 
+  id="registration-popup"
+  class="popup"
+>
+  <div class="popup__backdrop"></div>
+  {# Registration #}
+  <div class="popup__window">
+    <div class="popup__close">
+      <svg class="icon">
+        <use xlink:href="sprite.svg#close"></use>
+      </svg>
+    </div>
+
+    <div class="popup__title">
+      Регистрация
+    </div>
+
+    <form class="form">
+      <div class="form__item">
+        {{ textField("email", "email", "Email", true) }}
+      </div>
+
+      <div class="error-text">Email уже зарегистрирован</div>
+    </form>
+
+    <div class="popup__actions">
+      {{ button("Продолжить", "primary", "large", "", false, "email-confirmation-popup") }}
+    </div>
+  </div>
+</div>

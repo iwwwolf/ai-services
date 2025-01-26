@@ -164,5 +164,12 @@
     &__actions {
       margin-top: auto;
     }
+
+    &__button {
+      flex: 1;
+      padding-left: 14px;
+      padding-right: 14px;
+      white-space: nowrap;
+    }
   }
 }

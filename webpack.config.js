@@ -77,6 +77,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/templates/index.njk',
       filename: 'index.html',
+      minify: false,
       templateContent: ({ htmlWebpackPlugin }) => {
         const env = nunjucks.configure(path.resolve(__dirname, 'src/templates'), {
           autoescape: true,

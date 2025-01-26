@@ -1,0 +1,16 @@
+{% from "components/button.njk" import button %}
+
+<div 
+  id="mobile-navigation"
+  class="popup"
+>
+  <div class="popup__backdrop"></div>
+  <ul class="mobile-navigation">
+    <li class="mobile-navigation__item">
+      {{ button("Регистрация", "white", "large", '', false, "registration-popup") }}
+    </li>
+    <li class="mobile-navigation__item">
+      {{ button("Войти", "white", "large", '', false, "login-popup") }}
+    </li>
+  </ul>
+</div>

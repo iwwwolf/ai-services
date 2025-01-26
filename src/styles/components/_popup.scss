@@ -1,0 +1,129 @@
+.popup {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: rgba($primary-500, 0.9);
+  display: none;
+  overflow: auto;
+  overscroll-behavior-block: contain;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &.is-active {
+    display: flex;
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__window {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 18.9vh 16px 20px;
+    text-align: center;
+    width: 100%;
+    min-height: 100%;
+    background-color: $white;
+    position: relative;
+    margin: auto;
+    z-index: 1;
+
+    &.--transparent {
+      padding: 0;
+      background-color: transparent;
+      min-height: 0;
+
+      .popup__close {
+        color: $white;
+        right: 0;
+        top: -28px;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $primary-300;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 24px;
+    font-family: $title-font;
+    margin-bottom: 0;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: auto;
+    font-size: 16px;
+    line-height: 22px;
+    gap: 8px;
+
+    &.--large-space {
+      gap: 24px;
+    }
+  }
+  
+  @include min-width($bp-tablet) {
+    padding: 40px;
+
+    &__window {
+      max-width: 460px;
+      padding: 32px;
+      border-radius: 24px;
+      min-height: 0;
+      text-align: left;
+
+      &.--text-center {
+        text-align: center;
+      }
+
+      &.--transparent {
+        max-width: 1152px;
+      }
+    }
+
+    &__actions {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+
+      &.--center {
+        justify-content: center;
+      }
+
+      &.--large-space {
+        flex-direction: column;
+        align-items: flex-end;
+
+        & > * {
+          &:first-child {
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.request-popup-icon {
+  width: 48px;
+  height: 48px;
+  color: #07AA20;
+  margin-left: auto;
+  margin-right: auto;
+}

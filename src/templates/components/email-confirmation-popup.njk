@@ -1,0 +1,39 @@
+{% from "components/button.njk" import button %}
+{% from "components/text-field.njk" import textField %}
+
+<div 
+  id="email-confirmation-popup"
+  class="popup"
+>
+  <div class="popup__backdrop"></div>
+  {# Email confirmation #}
+  <div class="popup__window">
+    <div class="popup__close">
+      <svg class="icon">
+        <use xlink:href="sprite.svg#close"></use>
+      </svg>
+    </div>
+
+    <div class="popup__title">
+      Подтверждение email
+    </div>
+
+    <form class="form">
+      <div class="form__text">
+        Отправили код на email <strong>234234@gmail.com</strong>
+      </div>
+
+      <div class="form__item">
+        {{ textField("confirm-code", "text", "Код подтверждения", true) }}
+      </div>
+
+      <div class="error-text">Неверный код</div>
+    </form>
+
+    <div class="popup__actions">
+      {{ button("Назад", "translucent-light", "large", "") }}
+
+      {{ button("Отправить", "primary", "large", "", false, "set-password-popup") }}
+    </div>
+  </div>
+</div>

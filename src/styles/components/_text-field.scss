@@ -16,4 +16,8 @@
   &.--error {
     box-shadow: inset 0 0 0 2px $color-error;
   }
+
+  &::placeholder {
+    color: $secondary-400;
+  }
 }

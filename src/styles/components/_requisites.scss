@@ -1,0 +1,73 @@
+.requisites {
+  max-width: 860px;
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__subtitle-link {
+    display: block;
+    color: $secondary-400;
+    
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @include min-width($bp-tablet) {
+    &__subtitle {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  @include min-width($bp-desktop) {
+    &__subtitle {
+      font-size: 32px;
+    }
+  }
+}
+
+.requisites-list {
+  display: grid;
+  gap: 16px;
+
+  &__item-title {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 2px;
+  }
+
+  &__item-text {
+    font-family: $title-font;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include min-width($bp-tablet) {
+    gap: 24px;
+    
+    &__item-title {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__item-text {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  @include min-width($bp-desktop) {
+    &__subtitle {
+      font-size: 32px;
+    }
+  }
+}

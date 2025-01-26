@@ -15,6 +15,7 @@
 </head>
 <body>
   <main class="main">
+
     {% include "sections/intro.njk" %}
     
     <div class="container">
@@ -25,6 +26,17 @@
       {% include "sections/request.njk" %}
     </div>
   </main>
+
+  {% include "components/video-popup.njk" %}
+  {% include "components/request-sent-popup.njk" %}
+  
+  {% include "components/email-confirmation-popup.njk" %}
+  {% include "components/registration-popup.njk" %}
+  {% include "components/login-popup.njk" %}
+  {% include "components/set-password-popup.njk" %}
+  {% include "components/password-recovery-popup.njk" %}
+  {% include "components/requisites.njk" %}
+  {% include "components/mobile-navigation.njk" %}
   
   {% include "components/footer.njk" %}
 </body>

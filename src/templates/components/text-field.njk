@@ -1,13 +1,13 @@
-{% macro textField(name, type='text', placeholder='placeholder', error-text='') %}
+{% macro textField(name, type='text', placeholder='placeholder', error=false, error-text='') %}
   <input 
     type="{{ type }}"
     placeholder="{{ placeholder }}"
     name="{{ name }}"
-    class="text-field {{ '--error' if error-text }}"
+    class="text-field {{ '--error' if error }}"
   />
 
   {% if error-text %}
-    <div class="field-error">
+    <div class="error-text">
       {{ error-text }}
     </div>
   {% endif %}

@@ -1,0 +1,47 @@
+{% from "components/button.njk" import button %}
+{% from "components/text-field.njk" import textField %}
+
+<div 
+  id="login-popup"
+  class="popup"
+>
+  <div class="popup__backdrop"></div>
+  {# Login #}
+  <div class="popup__window">
+    <div class="popup__close">
+      <svg class="icon">
+        <use xlink:href="sprite.svg#close"></use>
+      </svg>
+    </div>
+
+    <div class="popup__title">
+      Вход
+    </div>
+
+    <form class="form">
+      <div class="form__item">
+        {{ textField("email", "email", "Email", true) }}
+      </div>
+
+      <div class="form__item">
+        {{ textField("password", "password", "Пароль", true) }}
+      </div>
+
+      <div class="error-text">Неверный пароль или email</div>
+    </form>
+
+    <div class="popup__actions --large-space">
+      <div>
+        <a 
+          href="#"
+          class="link"
+          data-popup-id="password-recovery-popup"
+        >
+          Восстановить пароль
+        </a>
+      </div>
+
+      {{ button("Отправить", "primary", "large", "") }}
+    </div>
+  </div>
+</div>

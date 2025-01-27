@@ -18,6 +18,10 @@ document.addEventListener('click', function(event) {
   
   const popupId = event.target.dataset.popupId;
   const modalBackdrop = event.target.closest('.popup__backdrop, .popup__close');
+
+  console.log('====================================');
+  console.log(event.target);
+  console.log('====================================');
   
   if (popupId) {
     event.preventDefault()

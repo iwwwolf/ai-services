@@ -11,7 +11,10 @@
     {{ button("Войти", "translucent", "small", "header__button", false, "login-popup") }}
   </div>
 
-  <button class="header__burger">
+  <button 
+    class="header__burger"
+    data-popup-id="mobile-navigation"
+  >
     <svg class="icon">
       <use xlink:href="sprite.svg#burger"></use>
     </svg>

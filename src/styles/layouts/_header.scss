@@ -9,6 +9,12 @@
     gap: 8px;
   }
 
+  &__burger {
+    .icon {
+      pointer-events: none;
+    }
+  }
+
   .logo {
     width: 162px;
     height: 20px;
